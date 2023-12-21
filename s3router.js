@@ -101,7 +101,7 @@ function S3Router(options, middleware) {
             }
             res.json({
                 signedUrl: data,
-                publicUrl: '/s3/uploads/' + filename,
+                publicUrl: `${req.baseUrl}/uploads/${filename}`,
                 filename: filename,
                 fileKey: fileKey,
             });
